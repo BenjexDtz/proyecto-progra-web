@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Ing. Carlos Saavedra">
+    <meta name="KEYWORDS" content="inicio con bootstrap">
+    <meta name="description" content="pagina mejorada de inicio con bootstrap 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Restaurante</title>
+    <link href="img/home/logo2.jpg" type="image/x-icon" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" href="fuentes/fonts.css">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Actividades extracurriculares</a>
+        <!-- Botón para volver atrás -->
+        <button class="btn btn-outline-light ms-auto" onclick="volverAtras()">
+            Volver atrás
+        </button>
+    </nav>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Hackatones -->
+            <div class="carousel-item active" style="background-color: #000;">
+                <div class="d-flex flex-column align-items-center justify-content-center h-200">
+                    <img src="img/actividades extracurriculares/hackaton.jpg" class="img-fluid" alt="Hackatones" style="max-height: 500px;">
+                    <div class="text-center text-white mt-3">
+                        <h2>Hackatones</h2>
+                        <p>Eventos donde los estudiantes desarrollan soluciones en equipo.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalHackatones">
+                            Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Conferencias -->
+            <div class="carousel-item" style="background-color: #000;">
+                <div class="d-flex flex-column align-items-center justify-content-center h-200">
+                    <img src="img/actividades extracurriculares/conferencias.jpg" class="img-fluid" alt="Conferencias" style="max-height: 500px;">
+                    <div class="text-center text-white mt-3">
+                        <h2>Conferencias</h2>
+                        <p>Charlas y ponencias con expertos en tecnología y software.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalConferencias">
+                            Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Talleres -->
+            <div class="carousel-item" style="background-color: #000;">
+                <div class="d-flex flex-column align-items-center justify-content-center h-200">
+                    <img src="img/actividades extracurriculares/talleres.jpg" class="img-fluid" alt="Talleres" style="max-height: 500px;">
+                    <div class="text-center text-white mt-3">
+                        <h2>Talleres</h2>
+                        <p>Actividades prácticas sobre programación, bases de datos, IA, etc.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTalleres">
+                            Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyectos -->
+            <div class="carousel-item" style="background-color: #000;">
+                <div class="d-flex flex-column align-items-center justify-content-center h-200">
+                    <img src="img/actividades extracurriculares/proyectos.jpg" class="img-fluid" alt="Proyectos" style="max-height: 500px;">
+                    <div class="text-center text-white mt-3">
+                        <h2>Proyectos</h2>
+                        <p>Desarrollo de aplicaciones y sistemas como parte de la formación.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProyectos">
+                            Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- Modales (igual que antes) -->
+    <!-- Modal Hackatones -->
+    <div class="modal fade" id="modalHackatones" tabindex="-1" aria-labelledby="modalHackatonesLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalHackatonesLabel">Hackatones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los hackatones son eventos intensivos donde los estudiantes trabajan en equipo para desarrollar soluciones innovadoras en un tiempo limitado. Estos eventos fomentan la creatividad, el trabajo en equipo y el aprendizaje práctico.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Conferencias -->
+    <div class="modal fade" id="modalConferencias" tabindex="-1" aria-labelledby="modalConferenciasLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConferenciasLabel">Conferencias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Las conferencias son charlas impartidas por expertos en tecnología, donde se abordan temas actuales y relevantes en el ámbito del software, la inteligencia artificial, la ciberseguridad y más. Son una excelente oportunidad para aprender de profesionales.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Talleres -->
+    <div class="modal fade" id="modalTalleres" tabindex="-1" aria-labelledby="modalTalleresLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTalleresLabel">Talleres</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los talleres son actividades prácticas donde los estudiantes aprenden habilidades específicas, como programación, manejo de bases de datos, desarrollo de aplicaciones móviles y más. Son ideales para aplicar conocimientos teóricos en proyectos reales.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Proyectos -->
+    <div class="modal fade" id="modalProyectos" tabindex="-1" aria-labelledby="modalProyectosLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProyectosLabel">Proyectos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Los proyectos son una parte fundamental de la formación, donde los estudiantes desarrollan aplicaciones y sistemas completos. Estos proyectos permiten integrar conocimientos y habilidades adquiridas durante el curso.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/UniversidadSalesianadeBolivia/?locale=es_LA" class="text-white text-decoration-none">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/discover/universidad-salesiana-de-bolivia" class="text-white text-decoration-none">TikTok</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=59172060082" class="text-white text-decoration-none">WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Sedes</h5>
+                    <ul class="list-unstyled">
+                        <li>La Paz</li>
+                        <li>Cochabamba</li>
+                        <li>Santa Cruz</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>WhatsApp</h5>
+                    <ul class="list-unstyled">
+                        <li>La Paz - <a href="https://wa.me/59172060082" class="text-white text-decoration-none">(591) 72060082</a></li>
+                        <li>Cochabamba - <a href="https://wa.me/59171565440" class="text-white text-decoration-none">(591) 71565440</a></li>
+                        <li>Santa Cruz - <a href="https://wa.me/59177722868" class="text-white text-decoration-none">(591) 77722868</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Texto final -->
+            <div class="text-center mt-4">
+                <p class="mb-0">Universidad Salesiana de Bolivia</p>
+                <p class="mb-0">Tu mejor opción</p>
+                <p class="mb-0">© 2025 Universidad Salesiana - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de Bootstrap y jQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para el botón "Volver atrás" -->
+    <script>
+        function volverAtras() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
