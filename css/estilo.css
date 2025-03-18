@@ -1,12 +1,73 @@
-    *{margin: 0px;padding: 0px;}
+/* Fondo negro para toda la página */
+body {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco por defecto */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el padding predeterminado */
+}
+
+/* Asegura que los textos en los carruseles sean visibles */
+.carousel-caption h1 {
+    color: white !important; /* Fuerza el texto a ser blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+}
+
+/* Ajusta el color del texto en las tarjetas */
+.card {
+    background-color: #333; /* Fondo oscuro para las tarjetas */
+    color: white; /* Texto blanco en las tarjetas */
+}
+
+/* Ajusta el color del texto en el footer */
+.jumbotron.bg-dark {
+    background-color: #222 !important; /* Fondo más oscuro para el footer */
+    color: white; /* Texto blanco en el footer */
+}
+
+/* Ajusta el color del texto en la barra de navegación */
+.navbar-brand, .nav-link {
+    color: white !important; /* Texto blanco en la barra de navegación */
+}
+
+/* Ajusta el color del texto en los botones */
+.btn-warning {
+    color: black; /* Texto negro en botones amarillos */
+}
+ 
+ *{margin: 0px;padding: 0px;}
 .navbar {
     background-color: #ee5624;
     font-size: 16px;
     font-family: arial;
 }
+
 .navbar-nav a:hover {
     background-color:cornsilk;
     color: blue;
+}
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.carrusel-angosto {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.carrusel-angosto .carousel-item img {
+    height: 350px;
+    object-fit: cover;
+}
+footer a:hover {
+    color: #ffc107 !important; /* Cambia el color al pasar el mouse (amarillo de Bootstrap) */
+    text-decoration: underline; /* Subraya los enlaces al pasar el mouse */
+}
+
+footer h5 {
+    border-bottom: 2px solid #ffc107; /* Línea amarilla debajo de los títulos */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+    margin-bottom: 15px; /* Espacio debajo del título */
 }
 footer {
     background-color: #ee5624;

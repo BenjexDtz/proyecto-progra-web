@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
+    <style>
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Ing. Carlos Saavedra">
@@ -15,7 +22,7 @@
     <link href="css/estilo.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<header style="background-color: white;">
+<header style="background-color: black;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col"><img src="img/home/usale.png" class="img-fluid"  alt="Placeholder image"></div>
@@ -28,27 +35,36 @@
 </header>
 <!--fin header!-->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: white;"  >BARRA DE NAVEGACION</a>
+        <a class="navbar-brand" href="#" style="color: white;">BARRA DE NAVEGACION</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Dropdown en "¿Cómo es la carrera?" -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        ¿Cómo es la carrera?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="mision_vision.html">Mision y Vision</a></li>
+                        <li><a class="dropdown-item" href="plan.html">Plan Curricular</a></li>
+                        <li><a class="dropdown-item" href="biblioteca.html">Biblioteca</a></li>
+                    </ul>
+                </li>
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="comoes.html"  style="color: white;" >¿Como es la carrera?</a>
+                    <a class="nav-link active" href="dondeestamos.html" style="color: white;">¿Dónde estamos?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="dondeestamos.html" style="color: white;"  >¿Dónde estamos?</a>
+                    <a class="nav-link active" href="proximos.html" style="color: white;">Próximos eventos y fechas importantes para la carrera!</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="proximos.html" style="color: white;"  >Proximos eventos y fechas importantes para la carrera!</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#" style="color: white;" >Iniciar Sesión en el SAF</a>
+                    <a class="nav-link active" href="#" style="color: white;">Iniciar Sesión en el SAF</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -61,12 +77,12 @@
 
 <!--Fin barra de navegacion-->
 
-<!--INICIO CARRUSEL-->
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="background-color: orange" >
-<!--INDICADORES-->
+<!--INICIO CARRUSEL 1-->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="background-color: black">
+    <!--INDICADORES-->
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
+            aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
@@ -77,8 +93,7 @@
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
     </div>
 
-
-<div class="carousel-inner">
+    <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="img/home/ESTUDIASISTEMAS10604.jpg" class="d-block mx-auto img-fluid" alt="primero">
             <div class="carousel-caption d-md-block">
@@ -103,12 +118,7 @@
                 <h1 style="color: black;">REQUISITOS</h1>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="img/home/Ingenieria_I-BANNER.jpg" class="d-block mx-auto img-fluid" alt="quinto">
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-        </div>
-</div>
+    </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Anterior</span>
@@ -117,62 +127,104 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Siguiente</span>
     </button>
-    </div>
-
-<!--FIN CARRUSEL-->
-
-<!--INICIO TARJETAS-->
-<div class="container text-center">
-    <h3>BIENVENIDO A LA PAGINA DE ING. DE SISTEMAS DE LA USALESIANA!</h3>
-    <h5>TE INVITAMOS A CONOCER MAS DE NOSOTROS</h5>
 </div>
+<!--FIN CARRUSEL 1-->
 
-<div class="container-fluid">
-    <div class="row text-center">
-        <div class="col-sm-4 col-6">
-            <div class="card col-lg-8 offset-lg-2 col-md-9 offset-md-2 col-sm-12 col-xs-12 col-12 offset-0">
-                <img class="card-img-top img-fluid" src="img/home/DALL·E 2025-03-06 16.10.45 - A minimalist flat-design icon of a white clock on a solid orange square background. The clock has a simple circular shape with hour and minute hands.webp" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">HORARIO DE ATENCIÓN</h5>
-                    <p class="card-text">Los días Lunes a Sábado de horas 7:30 a 22:00</p>
-                    <a href="#" class="btn btn-warning">¿Quieres saber más?</a>
-                </div>
+<div style="height: 100px;"></div>
+
+<!--INICIO CARRUSEL 2-->
+<div id="carouselSedes" class="carousel slide carrusel-angosto" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/home/sedes.png" class="d-block w-100" alt="Sedes">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Sedes en Bolivia</h1>
             </div>
         </div>
-
-        <div class="col-sm-4 col-6">
-            <div class="card col-lg-8 offset-lg-2 col-md-9 offset-md-1 col-sm-12">
-                <img class="card-img-top img-fluid" src="img/home/74114172-vector-del-icono-del-teléfono-contacto-muestra-del-servicio-de-ayuda-en-fondo-anaranjado-teléfono.jpg" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">NUESTRO CONTACTO</h5>
-                    <p class="card-text">Puedes contactarnos a través de nuestros numeros: 68037567 o por nuestra Pagina de Facebook</p>
-                    <a href="carta.html" class="btn btn-warning">¿Quieres saber más?</a>
-                </div>
+        <div class="carousel-item">
+            <img src="img/home/lp_Ri5MZCT.jpg" class="d-block w-100" alt="La Paz">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>La Paz</h1>
             </div>
         </div>
-
-        <div class="col-sm-4 col-6">
-            <div class="card col-lg-8 offset-lg-2 col-md-9 offset-md-1 col-sm-12 col-12">
-                <img class="card-img-top img-fluid" src="img/home/DALL·E 2025-03-06 16.11.20 - A minimalist flat-design icon of a white location pin on a solid orange square background. The pin has a simple and clean design.webp" alt="">
-                <div class="card-body float-left">
-                    <h5 class="card-title">NUESTRA DIRECCIÓN</h5>
-                    <p class="card-text">La universidad se encuentra en la zona de Achachicala, el piso de la carrera en el bloque B frente al matadero, pasate por nuestro campus!</p>
-                    <a href="#" class="btn btn-warning">¿Quieres saber más?</a>
-                </div>
+        <div class="carousel-item">
+            <img src="img/home/cbba.jpg" class="d-block w-100" alt="Cochabamba">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Cochabamba</h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/home/st.jpg" class="d-block w-100" alt="Santa Cruz">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Santa Cruz</h1>
             </div>
         </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselSedes" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselSedes" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
 </div>
-<!-- Fin de las tarjetas -->
+<!--FIN CARRUSEL 2-->
+
+<div style="height: 100px;"></div>
 
 
-<!--inicio de footer-->
-<div class="jumbotron bg-dark text-center text-warning">
-    <h1 class="display-4">UNIVERSIDAD SALESIANA DE BOLIVIA, TU MEJOR OPCION</h1>
-    <h1>+591 68037567</h1>
-    <h1>Tu opcion mas economica, confiada y asegurada!</h1>
-    <p class="lead">Copyright &copy;UNIVERSIDAD SALESIANA DE BOLIVIA - LA PAZ - BOLIVIA - TODOS LOS DERECHOS RESERVADOS</p>
+<!-- Sección con imagen de fondo -->
+<div class="text-center py-5 text-white" style="background-image: url('img/home/lp_Ri5MZCT.jpg'); background-size: cover; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <h1 class="display-4">27 AÑOS DE SERVICIO</h1>
+    <p class="lead">7 SEDES REPARTIDAS A LO ANCHO Y LARGO DE BOLIVIA</p>
+    <p>4650 ESTUDIANTES</p>
+    <p>DOCENTES CON MAESTRIAS EN ING DE SISTEMAS</p>
 </div>
+
+
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Columna 1: Redes Sociales -->
+            <div class="col-md-4 mb-4">
+                <h5>Redes Sociales</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/UniversidadSalesianadeBolivia/?locale=es_LA" class="text-white text-decoration-none">Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/discover/universidad-salesiana-de-bolivia" class="text-white text-decoration-none">TikTok</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=59172060082" class="text-white text-decoration-none">WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 2: Sedes -->
+            <div class="col-md-4 mb-4">
+                <h5>Sedes</h5>
+                <ul class="list-unstyled">
+                    <li>La Paz</li>
+                    <li>Cochabamba</li>
+                    <li>Santa Cruz</li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: WhatsApp -->
+            <div class="col-md-4 mb-4">
+                <h5>WhatsApp</h5>
+                <ul class="list-unstyled">
+                    <li>La Paz - <a href="https://wa.me/59172060082" class="text-white text-decoration-none">(591) 72060082</a></li>
+                    <li>Cochabamba - <a href="https://wa.me/59171565440" class="text-white text-decoration-none">(591) 71565440</a></li>
+                    <li>Santa Cruz - <a href="https://wa.me/59177722868" class="text-white text-decoration-none">(591) 77722868</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Texto final -->
+        <div class="text-center mt-4">
+            <p class="mb-0">Universidad Salesiana de Bolivia</p>
+            <p class="mb-0">Tu mejor opción</p>
+            <p class="mb-0">© 2025 Universidad Salesiana - Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="js/jquery-3.3.1.min.js"></script>
 
