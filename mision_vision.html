@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Ing. Carlos Saavedra">
+    <meta name="keywords" content="inicio con bootstrap">
+    <meta name="description" content="pagina mejorada de inicio con bootstrap 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>MISIONVISION</title>
+    <link href="img/home/logo2.jpg" type="image/x-icon" rel="shortcut icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Neb&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</head>
+<body style="background-color: black;"></body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/home/logousb.png" alt="Logo" style="height: 40px;"> <!-- Ajusta la ruta y el tamaño -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Dropdown en "¿Cómo es la carrera?" -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            ¿Cómo es la carrera?
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="mision_vision.html">Mision y Vision</a></li>
+                            <li><a class="dropdown-item" href="plan.html">Plan Curricular</a></li>
+                            <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">Biblioteca</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dondeestamos.html" style="color: white;">¿Dónde estamos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="proximos.html" style="color: white;">Próximos eventos y fechas importantes para la carrera!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" style="color: white;">Iniciar Sesión en el SAF</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<div class="text-center text-white" style="background-image: url('img/mision_vision/bg-1.jpg'); background-size: cover; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding-top: 10px; padding-bottom: 10px;">
+    <h1 class="display-4">QUIENES SOMOS?</h1>
+    <h2>MISION Y VISION</h2>
+    <br>
+    <br>
+    <br>
+</div>
+
+<div class="container my-5">
+    <div class="accordion accordion-custom" id="accordionExample">
+        <!-- OBJETIVOS -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    OBJETIVOS
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <img src="img/mision_vision/sis.jpg" class="img-fluid w-50" alt="Imagen de objetivos">
+                </div>
+            </div>
+        </div>
+
+        <!-- MISIÓN -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    MISIÓN
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <img src="img/mision_vision/mision.png" class="img-fluid" alt="Imagen de misión">
+                </div>
+            </div>
+        </div>
+
+        <!-- VISIÓN -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    VISIÓN
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <img src="img/mision_vision/vision.png" class="img-fluid" alt="Imagen de visión">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height: 100px;"></div>
+
+
+<div id="carouselSedes" class="carousel slide carrusel-angosto" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/home/sedes.png" class="d-block w-100" alt="Sedes">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Sedes en Bolivia</h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/home/lp_Ri5MZCT.jpg" class="d-block w-100" alt="La Paz">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>La Paz</h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/home/cbba.jpg" class="d-block w-100" alt="Cochabamba">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Cochabamba</h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/home/st.jpg" class="d-block w-100" alt="Santa Cruz">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Santa Cruz</h1>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselSedes" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselSedes" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+
+<div style="height: 100px;"></div>
+
+
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>Redes Sociales</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/UniversidadSalesianadeBolivia/?locale=es_LA" class="text-white text-decoration-none">Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/discover/universidad-salesiana-de-bolivia" class="text-white text-decoration-none">TikTok</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=59172060082" class="text-white text-decoration-none">WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5>Sedes</h5>
+                <ul class="list-unstyled">
+                    <li>La Paz</li>
+                    <li>Cochabamba</li>
+                    <li>Santa Cruz</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5>WhatsApp</h5>
+                <ul class="list-unstyled">
+                    <li>La Paz - <a href="https://wa.me/59172060082" class="text-white text-decoration-none">(591) 72060082</a></li>
+                    <li>Cochabamba - <a href="https://wa.me/59171565440" class="text-white text-decoration-none">(591) 71565440</a></li>
+                    <li>Santa Cruz - <a href="https://wa.me/59177722868" class="text-white text-decoration-none">(591) 77722868</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Texto final -->
+        <div class="text-center mt-4">
+            <p class="mb-0">Universidad Salesiana de Bolivia</p>
+            <p class="mb-0">Tu mejor opción</p>
+            <p class="mb-0">© 2025 Universidad Salesiana - Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+    <!-- jQuery y Bootstrap -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/bootstrap.bundle.min.js"></script>    
+
+</body>
+</html>

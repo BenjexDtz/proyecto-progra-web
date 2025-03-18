@@ -74,3 +74,69 @@ footer {
     font-size: 16px;
     font-family: arial;
 }
+
+/* Estilos personalizados para el acordeón */
+.accordion-custom .accordion-button {
+    background-color: skyblue; /* Fondo claro para los botones */
+    color: #333; /* Color de texto oscuro */
+    font-size: 1.25rem; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    padding: 1rem 1.5rem; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-bottom: 1px solid #ddd; /* Línea inferior sutil */
+}
+
+.accordion-custom .accordion-button:not(.collapsed) {
+    background-color: skyblue; /* Fondo cuando está expandido */
+    color: #000; /* Color de texto más oscuro */
+    box-shadow: none; /* Sin sombra */
+}
+
+.accordion-custom .accordion-button::after {
+    filter: brightness(0); /* Cambia el color del ícono a negro */
+}
+
+.accordion-custom .accordion-body {
+    padding: 1.5rem; /* Espaciado interno */
+    background-color: skyblue; /* Fondo blanco */
+    border-bottom: 1px solid #ddd; /* Línea inferior sutil */
+}
+
+.accordion-custom .accordion-body img {
+    margin-top: 1rem; /* Espacio arriba de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+/* Estilos para las imágenes dentro del acordeón */
+.accordion-custom .accordion-body img {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    max-width: 500px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Convierte la imagen en un bloque para centrarla */
+    margin: 1rem auto; /* Centra la imagen horizontalmente y agrega espacio arriba y abajo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para los iconos y enlaces */
+.icono-enlace {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icono-enlace:hover {
+    transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.icono-enlace h5 {
+    margin-top: 10px;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.icono-enlace i {
+    color: #007bff; /* Color azul para los iconos */
+}
