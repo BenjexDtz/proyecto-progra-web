@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .section {
+            padding: 60px 0; /* Espaciado para secciones */
+        }
+        .bg-light-dark {
+            background-color: #343a40; /* Fondo oscuro para secciones */
+            color: white;
+        }
+        .img-container {
+            text-align: center; /* Centrar imágenes */
+            margin-bottom: 20px; /* Espaciado inferior */
+        }
+        .img-container img {
+            max-width: 100%; /* Ajustar imagen al contenedor */
+            height: auto; /* Mantener proporción */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+        .text-content {
+            padding: 20px; /* Espaciado interno para texto */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Ing. Carlos Saavedra">
+    <meta name="KEYWORDS" content="inicio con bootstrap">
+    <meta name="description" content="página de actividades curriculares con bootstrap 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Actividades Curriculares</title>
+    <link href="img/home/logo2.jpg" type="image/x-icon" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" href="fuentes/fonts.css">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">BARRA DE NAVEGACION</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Dropdown en "¿Cómo es la carrera?" -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            ¿Cómo es la carrera?
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="mision_vision.html">Mision y Vision</a></li>
+                            <li><a class="dropdown-item" href="plan.html">Plan Curricular</a></li>
+                            <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">Biblioteca</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            Vida universitaria y Actividades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="actividades_extracurriculares.html">Actividades extracurriculares</a></li>
+                            <li><a class="dropdown-item" href="actividades_curriculares.html">Actividades curriculares</a></li>
+                            <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">Seminarios</a></li>
+                            <li><a class="dropdown-item" href="http:">Aulas y laboratorios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            Pasantias, Contactos y ChatBot
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pasantias.html">Pasantias</a></li>
+                            <li><a class="dropdown-item" href="plan.html">Contactos</a></li>
+                            <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">ChatBot</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiPisCZiJSMAxXgGLkGHahJDlIQFnoECAsQAQ&url=https%3A%2F%2Fsaf.usalesiana.edu.bo%2F&usg=AOvVaw26tdeGiOWFuiRCK5x997mo&opi=89978449" style="color: white;">Iniciar Sesión en el SAF</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Sección de Tutorías -->
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 img-container">
+                    <!-- Imagen de Tutorías -->
+                    <img src="img/actividades curriculares/tutorias.jpg" alt="Tutorías">
+                </div>
+                <div class="col-md-6 text-content">
+                    <h2>Tutorías</h2>
+                    <p>
+                        Las tutorías son sesiones personalizadas donde los estudiantes pueden resolver dudas y recibir orientación académica. 
+                        Estas sesiones son guiadas por profesores o tutores especializados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Trabajos de Investigación -->
+    <div class="section bg-light-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-content">
+                    <h2>Trabajos de Investigación</h2>
+                    <p>
+                        Los trabajos de investigación son proyectos académicos donde los estudiantes profundizan en un tema específico. 
+                        Estos proyectos fomentan el pensamiento crítico y las habilidades de investigación.
+                    </p>
+                </div>
+                <div class="col-md-6 img-container">
+                    <!-- Imagen de Trabajos de Investigación -->
+                    <img src="img/actividades curriculares/investigacion.jpg" alt="Trabajos de Investigación">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Prácticas Profesionales -->
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 img-container">
+                    <!-- Imagen de Prácticas Profesionales -->
+                    <img src="img/actividades curriculares/practicas.jpg" alt="Prácticas Profesionales">
+                </div>
+                <div class="col-md-6 text-content">
+                    <h2>Prácticas Profesionales</h2>
+                    <p>
+                        Las prácticas profesionales son una oportunidad para que los estudiantes apliquen sus conocimientos en un entorno laboral real. 
+                        Estas experiencias son supervisadas por profesionales y académicos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Evaluaciones Continuas -->
+    <div class="section bg-light-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-content">
+                    <h2>Evaluaciones Continuas</h2>
+                    <p>
+                        Las evaluaciones continuas son actividades regulares que permiten medir el progreso de los estudiantes a lo largo del semestre. 
+                        Incluyen quizzes, tareas y participaciones en clase.
+                    </p>
+                </div>
+                <div class="col-md-6 img-container">
+                    <!-- Imagen de Evaluaciones Continuas -->
+                    <img src="img/actividades curriculares/evaluaciones.jpg" alt="Evaluaciones Continuas">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/UniversidadSalesianadeBolivia/?locale=es_LA" class="text-white text-decoration-none">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/discover/universidad-salesiana-de-bolivia" class="text-white text-decoration-none">TikTok</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=59172060082" class="text-white text-decoration-none">WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Sedes</h5>
+                    <ul class="list-unstyled">
+                        <li>La Paz</li>
+                        <li>Cochabamba</li>
+                        <li>Santa Cruz</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>WhatsApp</h5>
+                    <ul class="list-unstyled">
+                        <li>La Paz - <a href="https://wa.me/59172060082" class="text-white text-decoration-none">(591) 72060082</a></li>
+                        <li>Cochabamba - <a href="https://wa.me/59171565440" class="text-white text-decoration-none">(591) 71565440</a></li>
+                        <li>Santa Cruz - <a href="https://wa.me/59177722868" class="text-white text-decoration-none">(591) 77722868</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Texto final -->
+            <div class="text-center mt-4">
+                <p class="mb-0">Universidad Salesiana de Bolivia</p>
+                <p class="mb-0">Tu mejor opción</p>
+                <p class="mb-0">© 2025 Universidad Salesiana - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de Bootstrap y jQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
