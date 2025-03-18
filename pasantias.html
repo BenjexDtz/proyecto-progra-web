@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Ing. Carlos Saavedra">
+    <meta name="keywords" content="inicio con bootstrap">
+    <meta name="description" content="pagina mejorada de inicio con bootstrap 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>PASANTIAS</title>
+    <link href="img/home/logo2.jpg" type="image/x-icon" rel="shortcut icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Neb&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</head>
+
+<style>
+    /* Estilos generales */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Encabezado */
+    header {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    /* Navegación */
+    nav {
+        background-color: #34495e;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: #ecf0f1;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #1abc9c;
+    }
+
+    /* Carrusel de Imágenes */
+    .carrusel {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .carrusel img {
+        width: 100%;
+        display: none;
+        border-radius: 10px;
+    }
+
+    .carrusel img.active {
+        display: block;
+        animation: fade 1.5s;
+    }
+
+    @keyframes fade {
+        from { opacity: 0.4; }
+        to { opacity: 1; }
+    }
+
+    /* Controles del Carrusel */
+    .carrusel-controls {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .carrusel-controls button {
+        background-color: #1abc9c;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .carrusel-controls button:hover {
+        background-color: #16a085;
+    }
+
+    /* Secciones */
+    section {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 1000px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #1abc9c;
+        padding-bottom: 10px;
+    }
+
+    /* Testimonios */
+    .testimonios {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .testimonio {
+        background-color: #ecf0f1;
+        padding: 20px;
+        border-radius: 10px;
+        flex: 0 0 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonio p {
+        font-style: italic;
+        color: #666;
+    }
+
+    .testimonio h4 {
+        margin-top: 10px;
+        color: #2c3e50;
+    }
+
+    /* Formulario de Solicitud */
+    .formulario-pasantias {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .formulario-pasantias label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .formulario-pasantias input, .formulario-pasantias textarea, .formulario-pasantias select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .formulario-pasantias button {
+        background-color: #1abc9c;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .formulario-pasantias button:hover {
+        background-color: #16a085;
+    }
+
+    /* Pie de Página */
+    footer {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <h1>Pasantías Universidad Salesiana De Bolivia</h1>
+    <p>Oportunidades para estudiantes y recién graduados</p>
+</header>
+
+<!-- Navegación -->
+<nav>
+    <a href="#informacion">¿Qué son las Pasantías?</a>
+    <a href="#beneficios">Beneficios de las Pasantías</a>
+    <a href="#requisitos">Requisitos para Postular</a>
+    <a href="#testimonios">Testimonios de Pasantes</a>
+    <a href="#solicitud">Solicita tu Pasantía</a>
+</nav>
+
+<!-- Carrusel de Imágenes -->
+<div class="carrusel">
+    <img src="img/pasantias/pasantiafoto1.jpg" alt="Imagen 1" class="active">
+    <img src="img/pasantias/pasantiafoto2.jpg" alt="Imagen 2">
+    <img src="img/pasantias/pasantiafoto3.jpg" alt="Imagen 3">
+</div>
+
+<!-- Controles del Carrusel -->
+<div class="carrusel-controls">
+    <button onclick="prevImage()">Anterior</button>
+    <button onclick="nextImage()">Siguiente</button>
+</div>
+
+<!-- Sección de Información -->
+<section id="informacion">
+    <h2>¿Qué son las Pasantías?</h2>
+    <p>Las pasantías son programas diseñados para que estudiantes y recién graduados adquieran experiencia práctica en su campo de estudio. Estas oportunidades permiten aplicar los conocimientos teóricos en un entorno laboral real, bajo la supervisión de profesionales experimentados.</p>
+</section>
+
+<!-- Sección de Beneficios -->
+<section id="beneficios">
+    <h2>Beneficios de las Pasantías</h2>
+    <ul>
+        <li>Experiencia laboral en tu área de estudio.</li>
+        <li>Oportunidad de networking con profesionales.</li>
+        <li>Desarrollo de habilidades prácticas y técnicas.</li>
+        <li>Posibilidad de obtener una oferta laboral al finalizar.</li>
+    </ul>
+</section>
+
+<!-- Sección de Requisitos -->
+<section id="requisitos">
+    <h2>Requisitos para Postular</h2>
+    <ul>
+        <li>Ser estudiante activo o recién graduado.</li>
+        <li>Contar con un CV actualizado.</li>
+        <li>Carta de recomendación (opcional).</li>
+        <li>Disponibilidad de tiempo (mínimo 20 horas semanales).</li>
+    </ul>
+</section>
+
+<!-- Sección de Testimonios -->
+<section id="testimonios">
+    <h2>Testimonios de Pasantes</h2>
+    <div class="testimonios">
+        <div class="testimonio">
+            <p>"Mi pasantía fue una experiencia increíble. Aprendí mucho y conocí a personas que me ayudaron a crecer profesionalmente."</p>
+            <h4>- María González</h4>
+        </div>
+        <div class="testimonio">
+            <p>"Gracias a la pasantía, conseguí mi primer trabajo en una empresa líder en el sector."</p>
+            <h4>- Juan Pérez</h4>
+        </div>
+        <div class="testimonio">
+            <p>"Recomiendo totalmente las pasantías. Son una gran oportunidad para empezar tu carrera."</p>
+            <h4>- Ana López</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Formulario de Solicitud -->
+<section id="solicitud" class="formulario-pasantias">
+    <h2>Solicita tu Pasantía</h2>
+    <form action="#" method="post">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="carrera">Carrera o Área de Estudio:</label>
+        <input type="text" id="carrera" name="carrera" required>
+
+        <label for="mensaje">Mensaje (opcional):</label>
+        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+</section>
+
+<!-- Pie de Página -->
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>Redes Sociales</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/UniversidadSalesianadeBolivia/?locale=es_LA" class="text-white text-decoration-none">Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/discover/universidad-salesiana-de-bolivia" class="text-white text-decoration-none">TikTok</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=59172060082" class="text-white text-decoration-none">WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5>Sedes</h5>
+                <ul class="list-unstyled">
+                    <li>La Paz</li>
+                    <li>Cochabamba</li>
+                    <li>Santa Cruz</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5>WhatsApp</h5>
+                <ul class="list-unstyled">
+                    <li>La Paz - <a href="https://wa.me/59172060082" class="text-white text-decoration-none">(591) 72060082</a></li>
+                    <li>Cochabamba - <a href="https://wa.me/59171565440" class="text-white text-decoration-none">(591) 71565440</a></li>
+                    <li>Santa Cruz - <a href="https://wa.me/59177722868" class="text-white text-decoration-none">(591) 77722868</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Texto final -->
+        <div class="text-center mt-4">
+            <p class="mb-0">Universidad Salesiana de Bolivia</p>
+            <p class="mb-0">Tu mejor opción</p>
+            <p class="mb-0">© 2025 Universidad Salesiana - Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Script para el Carrusel -->
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carrusel img');
+    const totalImages = images.length;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.remove('active');
+            if (i === index) {
+                img.classList.add('active');
+            }
+        });
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(currentIndex);
+    }
+
+    // Cambiar automáticamente cada 5 segundos
+    setInterval(nextImage, 5000);
+</script>
+
+</body>
+</html>
