@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Ing. Carlos Saavedra">
+    <meta name="keywords" content="inicio con bootstrap">
+    <meta name="description" content="pagina mejorada de inicio con bootstrap 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>PASANTIAS</title>
+    <link href="img/home/logo2.jpg" type="image/x-icon" rel="shortcut icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Neb&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/home/logousb.png" alt="Logo" style="height: 40px;"> <!-- Ajusta la ruta y el tamaño -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Dropdown en "¿Cómo es la carrera?" -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        ¿Cómo es la carrera?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="mision_vision.html">Mision y Vision</a></li>
+                        <li><a class="dropdown-item" href="plan.html">Plan Curricular</a></li>
+                        <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">Biblioteca</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        Vida universitaria y Actividades
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="actividades_extracurriculares.html">Actividades extracurriculares</a></li>
+                        <li><a class="dropdown-item" href="actividades_curriculares.html">Actividades curriculares</a></li>
+                        <li><a class="dropdown-item" href="seminarios.html">Seminarios</a></li>
+                        <li><a class="dropdown-item" href="aulas_y_laboratorios.html">Aulas y laboratorios</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        Pasantias, Contactos y ChatBot
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="pasantias.html">Pasantias</a></li>
+                        <li><a class="dropdown-item" href="contactos.html">Contactos</a></li>
+                        <li><a class="dropdown-item" href="chatbot.html">ChatBot</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiPisCZiJSMAxXgGLkGHahJDlIQFnoECAsQAQ&url=https%3A%2F%2Fsaf.usalesiana.edu.bo%2F&usg=AOvVaw26tdeGiOWFuiRCK5x997mo&opi=89978449" style="color: white;">Iniciar Sesión en el SAF</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Estilos para el chatbot */
+    .chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: none; /* Oculto por defecto */
+    }
+
+    .chatbot-header {
+        background-color: #1abc9c;
+        color: #fff;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .chatbot-body {
+        padding: 10px;
+        height: 200px;
+        overflow-y: auto;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .chatbot-footer {
+        padding: 10px;
+    }
+
+    .chatbot-footer input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .chatbot-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #1abc9c;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .message {
+        margin-bottom: 10px;
+    }
+
+    .message.user {
+        text-align: right;
+    }
+
+    .message.bot {
+        text-align: left;
+    }
+
+    .message p {
+        display: inline-block;
+        padding: 8px;
+        border-radius: 10px;
+        max-width: 80%;
+    }
+
+    .message.user p {
+        background-color: #1abc9c;
+        color: #fff;
+    }
+
+    .message.bot p {
+        background-color: #f1f1f1;
+        color: #333;
+    }
+</style>
+</head>
+<body>
+
+<!-- Contenido de tu página -->
+<header>
+    <h1>Contactos</h1>
+    <p>Estamos aquí para ayudarte. ¡Contáctanos cuando lo necesites!</p>
+</header>
+
+<!-- Botón para abrir el chatbot -->
+<button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+
+<!-- Contenedor del chatbot -->
+<div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">
+        Asistente Virtual
+    </div>
+    <div class="chatbot-body" id="chatbot-body">
+        <div class="message bot">
+            <p>¡Hola! ¿En qué puedo ayudarte hoy?</p>
+        </div>
+    </div>
+    <div class="chatbot-footer">
+        <input type="text" id="user-input" placeholder="Escribe tu mensaje..." onkeypress="handleKeyPress(event)">
+    </div>
+</div>
+
+<script>
+    // Función para mostrar/ocultar el chatbot
+    function toggleChatbot() {
+        const chatbot = document.getElementById('chatbot');
+        chatbot.style.display = chatbot.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Función para manejar la entrada del usuario
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            const userInput = document.getElementById('user-input');
+            const message = userInput.value.trim();
+
+            if (message !== '') {
+                // Mostrar el mensaje del usuario
+                const chatbotBody = document.getElementById('chatbot-body');
+                chatbotBody.innerHTML += `
+                    <div class="message user">
+                        <p>${message}</p>
+                    </div>
+                `;
+
+                // Respuesta automática del bot
+                chatbotBody.innerHTML += `
+                    <div class="message bot">
+                        <p>Gracias por tu mensaje. Te responderemos pronto.</p>
+                    </div>
+                `;
+
+                // Limpiar el campo de entrada
+                userInput.value = '';
+
+                // Desplazar el chat hacia abajo
+                chatbotBody.scrollTop = chatbotBody.scrollHeight;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
