@@ -13,10 +13,13 @@ body {
 }
 
 /* Ajusta el color del texto en las tarjetas */
-.card {
-    background-color: #333; /* Fondo oscuro para las tarjetas */
-    color: white; /* Texto blanco en las tarjetas */
+.card a {
+    color: white;
 }
+.card a:hover {
+    color: #FFD700; /* Cambio de color en hover */
+}
+
 
 /* Ajusta el color del texto en el footer */
 .jumbotron.bg-dark {
@@ -35,8 +38,23 @@ body {
 }
 
  *{margin: 0px;padding: 0px;}
+
+ .navbar {
+    transition: all 0.4s ease-in-out;
+}
+
+
 .navbar {
-    transition: all 0,3s ease-in-out;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navbar {
+    transition: all 0.3s ease-in-out;
     background-color: #ee5624;
     font-size: 16px;
     font-family: arial;
@@ -44,7 +62,8 @@ body {
 
 .scrolled{
     background-color: rgba(0, 33, 71, 0.95) !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
 }
 
 header .container {
@@ -68,7 +87,12 @@ header .container {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
- 
+.carousel-item {
+    transition: opacity 1s ease-in-out;
+}
+
+
+
 .carousel-item img {
     height: 600px;
     object-fit: cover;
@@ -89,6 +113,18 @@ header .container {
     height: 350px;
     object-fit: cover;
 }
+
+footer {
+    padding: 20px;
+}
+
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
 footer a:hover {
     color: #ffc107 !important; /* Cambia el color al pasar el mouse (amarillo de Bootstrap) */
     text-decoration: underline; /* Subraya los enlaces al pasar el mouse */
@@ -211,4 +247,11 @@ footer {
     font-size: 20px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
 }
