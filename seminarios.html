@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminarios - Ingeniería de Sistemas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .bg-light-dark {
+            background-color: #343a40;
+            color: white;
+        }
+        .seminario-card, .testimonio {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .seminario-card img, .testimonio img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .testimonio img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #343a40;
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/home/logousb.png" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ¿Cómo es la carrera?
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="mision_vision.html">Mision y Vision</a></li>
+                            <li><a class="dropdown-item" href="plan.html">Plan Curricular</a></li>
+                            <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">Biblioteca</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Vida universitaria y Actividades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="actividades_extracurriculares.html">Actividades extracurriculares</a></li>
+                            <li><a class="dropdown-item" href="actividades_curriculares.html">Actividades curriculares</a></li>
+                            <li><a class="dropdown-item" href="seminarios.html">Seminarios</a></li>
+                            <li><a class="dropdown-item" href="http:">Aulas y laboratorios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pasantias, Contactos y ChatBot
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pasantias.html">Pasantias</a></li>
+                            <li><a class="dropdown-item" href="plan.html">Contactos</a></li>
+                            <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">ChatBot</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiPisCZiJSMAxXgGLkGHahJDlIQFnoECAsQAQ&url=https%3A%2F%2Fsaf.usalesiana.edu.bo%2F&usg=AOvVaw26tdeGiOWFuiRCK5x997mo&opi=89978449">Iniciar Sesión en el SAF</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Seminarios -->
+    <div class="section">
+        <div class="container">
+            <h1 class="text-center mb-5">Seminarios de Ingeniería de Sistemas</h1>
+            <div class="row">
+                <div class="col-md-4 seminario-card hover-effect">
+                    <img src="img/seminarios/artificial.jpg" alt="Inteligencia Artificial">
+                    <h3>Inteligencia Artificial</h3>
+                    <p>
+                        Explora los fundamentos de la IA y su aplicación en la ingeniería de sistemas. 
+                        Aprende sobre machine learning, redes neuronales y más.
+                    </p>
+                </div>
+                <div class="col-md-4 seminario-card hover-effect">
+                    <img src="img/seminarios/ciberseguridad.jpg" alt="Ciberseguridad">
+                    <h3>Ciberseguridad</h3>
+                    <p>
+                        Descubre las mejores prácticas para proteger sistemas y redes. 
+                        Aprende sobre criptografía, firewalls y análisis de vulnerabilidades.
+                    </p>
+                </div>
+                <div class="col-md-4 seminario-card hover-effect">
+                    <img src="img/seminarios/cloud.jpg" alt="Cloud Computing">
+                    <h3>Cloud Computing</h3>
+                    <p>
+                        Conoce las tecnologías de computación en la nube y su impacto en los sistemas modernos. 
+                        Aprende sobre AWS, Azure y Google Cloud.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Testimonios -->
+    <div class="section bg-light-dark">
+        <div class="container">
+            <h2 class="text-center mb-5">Testimonios de Directores y Docentes</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonio hover-effect">
+                        <img src="img/seminarios/jesus.jpg" alt="Jesus Rocha Vera">
+                        <p>"Los seminarios me ayudaron a entender conceptos avanzados de IA que ahora aplico en mi trabajo."</p>
+                        <footer class="blockquote-footer">Jesus Rocha Vera, <cite>Ingeniero de Sistemas</cite></footer>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonio hover-effect">
+                        <img src="img/seminarios/gabriela.jpg" alt="María Gómez">
+                        <p>"La ciberseguridad es un tema crucial, y estos seminarios me dieron las bases para especializarme."</p>
+                        <footer class="blockquote-footer">Gabriiela Alejanda Gallo, <cite>Lic.</cite></footer>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonio hover-effect">
+                        <img src="img/seminarios/hernan.jpg" alt="Hernan Civera Salazar">
+                        <p>"Cloud Computing es el futuro, y estos seminarios me prepararon para liderar proyectos en la nube."</p>
+                        <footer class="blockquote-footer">Hernan Civera Salazar, <cite>Lic.</cite></footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/UniversidadSalesianadeBolivia/?locale=es_LA" class="text-white text-decoration-none">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/discover/universidad-salesiana-de-bolivia" class="text-white text-decoration-none">TikTok</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=59172060082" class="text-white text-decoration-none">WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Sedes</h5>
+                    <ul class="list-unstyled">
+                        <li>La Paz</li>
+                        <li>Cochabamba</li>
+                        <li>Santa Cruz</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>WhatsApp</h5>
+                    <ul class="list-unstyled">
+                        <li>La Paz - <a href="https://wa.me/59172060082" class="text-white text-decoration-none">(591) 72060082</a></li>
+                        <li>Cochabamba - <a href="https://wa.me/59171565440" class="text-white text-decoration-none">(591) 71565440</a></li>
+                        <li>Santa Cruz - <a href="https://wa.me/59177722868" class="text-white text-decoration-none">(591) 77722868</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="mb-0">Universidad Salesiana de Bolivia</p>
+                <p class="mb-0">Tu mejor opción</p>
+                <p class="mb-0">© 2025 Universidad Salesiana - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
