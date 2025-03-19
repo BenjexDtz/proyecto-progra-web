@@ -33,22 +33,52 @@ body {
 .btn-warning {
     color: black; /* Texto negro en botones amarillos */
 }
- 
+
  *{margin: 0px;padding: 0px;}
 .navbar {
+    transition: all 0,3s ease-in-out;
     background-color: #ee5624;
     font-size: 16px;
     font-family: arial;
 }
 
-.navbar-nav a:hover {
-    background-color:cornsilk;
-    color: blue;
+.scrolled{
+    background-color: rgba(0, 33, 71, 0.95) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #FFD700 !important; /* Amarillo dorado */
+}
+
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    padding: 15px;
+}
+.carousel-caption h1 {
+    color: white !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+ 
 .carousel-item img {
     height: 600px;
     object-fit: cover;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
 
 .carrusel-angosto {
     max-width: 50%;
@@ -70,9 +100,18 @@ footer h5 {
     margin-bottom: 15px; /* Espacio debajo del título */
 }
 footer {
-    background-color: #ee5624;
+    background-color: #002147;
     font-size: 16px;
     font-family: arial;
+}
+.social-icon {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.social-icon:hover {
+    color: #FFD700;
 }
 
 /* Estilos personalizados para el acordeón */
@@ -139,4 +178,37 @@ footer {
 
 .icono-enlace i {
     color: #007bff; /* Color azul para los iconos */
+}
+#btnTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFD700;
+    color: #002147;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+#btnTop:hover {
+    background-color: #002147;
+    color: #FFD700;
+}
+
+#chatbotBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #FFD700;
+    color: #002147;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
