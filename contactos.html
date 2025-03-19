@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Ing. Carlos Saavedra">
+    <meta name="keywords" content="inicio con bootstrap">
+    <meta name="description" content="pagina mejorada de inicio con bootstrap 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>PASANTIAS</title>
+    <link href="img/home/logo2.jpg" type="image/x-icon" rel="shortcut icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Neb&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/home/logousb.png" alt="Logo" style="height: 40px;"> <!-- Ajusta la ruta y el tamaño -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Dropdown en "¿Cómo es la carrera?" -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        ¿Cómo es la carrera?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="mision_vision.html">Mision y Vision</a></li>
+                        <li><a class="dropdown-item" href="plan.html">Plan Curricular</a></li>
+                        <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">Biblioteca</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        Vida universitaria y Actividades
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="actividades_extracurriculares.html">Actividades extracurriculares</a></li>
+                        <li><a class="dropdown-item" href="actividades_curriculares.html">Actividades curriculares</a></li>
+                        <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">Seminarios</a></li>
+                        <li><a class="dropdown-item" href="http:">Aulas y laboratorios</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        Pasantias, Contactos y ChatBot
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="pasantias.html">Pasantias</a></li>
+                        <li><a class="dropdown-item" href="contactos.html">Contactos</a></li>
+                        <li><a class="dropdown-item" href="http://crai.usalesiana.edu.bo/">ChatBot</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiPisCZiJSMAxXgGLkGHahJDlIQFnoECAsQAQ&url=https%3A%2F%2Fsaf.usalesiana.edu.bo%2F&usg=AOvVaw26tdeGiOWFuiRCK5x997mo&opi=89978449" style="color: white;">Iniciar Sesión en el SAF</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Estilos generales */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Encabezado */
+    header {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.8rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    /* Navegación */
+    nav {
+        background-color: #34495e;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        color: #ecf0f1;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    nav a:hover {
+        color: #1abc9c;
+    }
+
+    /* Contenedor principal */
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    /* Sección de Información de Contacto */
+    .contact-info {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .contact-info div {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 30%;
+        margin: 10px;
+    }
+
+    .contact-info h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    .contact-info p {
+        color: #666;
+    }
+
+    /* Sección de Preguntas Frecuentes (FAQ) */
+    .faq {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+    }
+
+    .faq h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #1abc9c;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+    }
+
+    .faq-item h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    .faq-item p {
+        color: #666;
+    }
+
+    /* Pie de Página */
+    footer {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <h1>Contactanos</h1>
+    <p>"En la Universidad Salesiana De Bolivia, estamos comprometidos a brindarte el mejor servicio. Si tienes preguntas, comentarios o necesitas asistencia, no dudes en contactarnos. ¡Estamos aquí para ayudarte en cada paso del camino!"
+
+    </p>
+</header>
+
+<!-- Navegación -->
+<nav>
+    <a href="#informacion">Información</a>
+    <a href="#faq">Preguntas Frecuentes</a>
+    <a href="#redes">Redes Sociales</a>
+</nav>
+
+<!-- Contenedor Principal -->
+<div class="container">
+
+    <!-- Sección de Información de Contacto -->
+    <section id="informacion" class="contact-info">
+        <div>
+            <h3>Ubicación</h3>
+            <p>Av. Chacaltaya Nro. 1258, Zona Achachicala</p>
+            <p><a href="https://maps.app.goo.gl/HXNWqVmKPTrqowat5?g_st=aw" target="_blank">Nuestra Direccion Sede La Paz</a></p>
+        </div>
+        <div>
+            <h3>Numero De Informaciones</h3>
+            <p>WhatsApp</p>
+            <p><a href="https://wa.me/59172060082" target="_blank">Escribenos A Este Numero</a></p>
+        </div>
+        <div>
+            <h3>Correo Electrónico</h3>
+            <p>Universidad Salesiana De Bolivia</p>
+            <p><a href="informaciones@usalesiana.edu.bo" target="_blank">Escribenos A Nuestro Correo Electronico</a></p>
+        </div>
+    </section>
+
+    <!-- Sección de Preguntas Frecuentes (FAQ) -->
+    <section id="faq" class="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <h3>¿Cómo puedo contactarlos?</h3>
+            <p>Puedes contactarnos a través de nuestro teléfono, correo electrónico o visitando nuestras redes sociales.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Cuál es su horario de atención?</h3>
+            <p>Nuestro horario de atención es de lunes a viernes, de 9:00 a.m. a 6:00 p.m.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Dónde están ubicados?</h3>
+            <p>Estamos ubicados en Av. Principal #123, Ciudad, País. ¡Te esperamos!</p>
+        </div>
+    </section>
+
+    <!-- Sección de Redes Sociales -->
+    <section id="redes" class="contact-info">
+        <div>
+            <h3>Facebook</h3>
+            <p><a href="https://www.facebook.com/share/1AQQgUrgGm/" target="_blank">Siguenos En Nuestra Pagina De Facebook</a></p>
+        </div>
+        <div>
+            <h3>Instagram</h3>
+            <p><a href="https://www.instagram.com/usalesiana?igsh=cTdzbzU1dnRkbjc2" target="_blank">Siguenos En Nuestra Pagina De Instagram</a></p>
+        </div>
+        <div>
+            <h3>YouTube</h3>
+            <p><a href="https://youtube.com/@universidadsalesianadeboli5407?si=oUcC2FxwHYDiiSPb" target="_blank">Siguenos En Nuestra Pagina De YouTube</a></p>
+        </div>
+    </section>
+
+</div>
+
+<!-- Pie de Página -->
+<footer>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Redes Sociales -->
+                <div class="col-md-4 mb-4 text-center">
+                    <h5>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.facebook.com/UniversidadSalesianadeBolivia/?locale=es_LA" class="text-white text-decoration-none">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/discover/universidad-salesiana-de-bolivia" class="text-white text-decoration-none">
+                                <i class="fab fa-tiktok"></i> TikTok
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=59172060082" class="text-white text-decoration-none">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Columna 2: Sedes -->
+                <div class="col-md-4 mb-4 text-center">
+                    <h5>Sedes</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i> La Paz</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Cochabamba</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Santa Cruz</li>
+                    </ul>
+                </div>
+    
+                <!-- Columna 3: Contacto WhatsApp -->
+                <div class="col-md-4 mb-4 text-center">
+                    <h5>Contacto por WhatsApp</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fab fa-whatsapp"></i> La Paz - 
+                            <a href="https://wa.me/59172060082" class="text-white text-decoration-none">(591) 72060082</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i> Cochabamba - 
+                            <a href="https://wa.me/59171565440" class="text-white text-decoration-none">(591) 71565440</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i> Santa Cruz - 
+                            <a href="https://wa.me/59177722868" class="text-white text-decoration-none">(591) 77722868</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Línea divisoria -->
+            <hr class="bg-light">
+    
+            <!-- Texto final -->
+            <div class="text-center mt-3">
+                <p class="mb-0">Universidad Salesiana de Bolivia - <strong>Tu mejor opción</strong></p>
+                <p class="mb-0">© 2025 Universidad Salesiana - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+</footer>
+
+</body>
+</html>
