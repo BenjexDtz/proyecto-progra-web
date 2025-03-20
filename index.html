@@ -5,6 +5,13 @@
         .nav-item.dropdown:hover .dropdown-menu {
             display: block;
         }
+        .logo-circular {
+        border-radius: 50%; 
+        object-fit: cover;  
+        width: 50px;        
+        height: 50px;       
+        border: 2px solid white; 
+    }
     </style>
 
     <meta charset="UTF-8">
@@ -37,7 +44,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: white;">BARRA DE NAVEGACION</a>
+        <a class="navbar-brand" href="#" style="color: white;"><img src="img/home/logo usb.jpg" class="img-fluid logo-circular" height="50px" width="50px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -75,6 +82,16 @@
                         <li><a class="dropdown-item" href="pasantias.html">Pasantias</a></li>
                         <li><a class="dropdown-item" href="contactos.html">Contactos</a></li>
                         <li><a class="dropdown-item" href="chatbot.html">ChatBot</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                        Admisión y Titulación
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="modalidades.html">Modalidades de graduacion</a></li>
+                        <li><a class="dropdown-item" href="perfil.html">Perfil profesional</a></li>
+                        <li><a class="dropdown-item" href="requisitos.html">Requisitos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item active">
