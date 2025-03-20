@@ -5,6 +5,86 @@
         .nav-item.dropdown:hover .dropdown-menu {
             display: block;
         }
+        .logo-circular {
+        border-radius: 50%; 
+        object-fit: cover;  
+        width: 50px;        
+        height: 50px;       
+        border: 2px solid white; 
+    }
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f8ff; /* Fondo suave */
+    color: #333;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+h1 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modalidad-card {
+    background-color: #0056b3;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modalidad-card:hover {
+    background-color: #003366;
+}
+
+.modalidad-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.modalidad-card p {
+    font-size: 16px;
+}
+
+.modalidad-description {
+    display: none;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modalidad-description.show {
+    display: block;
+}
+
+/* Botón de contacto */
+.contact-button {
+    display: block;
+    width: 250px;
+    margin: 30px auto;
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #003366;
+}
+
     </style>
 
     <meta charset="UTF-8">
@@ -21,15 +101,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
-<style>
-    .logo-circular {
-        border-radius: 50%; 
-        object-fit: cover;  
-        width: 50px;        
-        height: 50px;       
-        border: 2px solid white; 
-    }
-</style>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
@@ -91,6 +163,52 @@
         </div>
     </nav>
 
+    <div class="container">
+        <h1>Modalidades de Graduación</h1>
+
+        <div class="modalidad-card" onclick="toggleDescription('modalidad1')">
+            <h3>Modalidad 1: Tesis</h3>
+            <p>Conoce los detalles sobre la modalidad de tesis para tu graduación.</p>
+            <div id="modalidad1" class="modalidad-description">
+                <p>La modalidad de tesis permite a los estudiantes realizar una investigación profunda sobre un tema específico dentro de su carrera. Esta modalidad requiere de un asesor académico y la presentación de un trabajo final para su evaluación.</p>
+            </div>
+        </div>
+
+        <div class="modalidad-card" onclick="toggleDescription('modalidad2')">
+            <h3>Modalidad 2: Examen de Grado</h3>
+            <p>Descubre cómo funciona el examen de grado y cómo prepararte para esta modalidad.</p>
+            <div id="modalidad2" class="modalidad-description">
+                <p>El examen de grado consiste en una evaluación oral o escrita sobre los contenidos fundamentales de la carrera. El estudiante debe demostrar sus conocimientos a través de una presentación ante un jurado académico.</p>
+            </div>
+        </div>
+
+        <div class="modalidad-card" onclick="toggleDescription('modalidad3')">
+            <h3>Modalidad 3: Proyecto de grado</h3>
+            <p>Aprende más sobre cómo presentar un proyecto final para tu graduación.</p>
+            <div id="modalidad3" class="modalidad-description">
+                <p>El proyecto final consiste en la creación de un proyecto práctico que resuelva un problema real en el campo de la carrera. Este proyecto debe ser presentado ante un jurado que evalúa tanto la creatividad como la aplicabilidad del trabajo.</p>
+            </div>
+        </div>
+        <div class="modalidad-card" onclick="toggleDescription('modalidad3')">
+            <h3>Modalidad 4: Trabajo Dirigido</h3>
+            <p>Aprende más sobre cómo elaborar un trabajo dirigido</p>
+            <div id="modalidad3" class="modalidad-description">
+                <p>El trabajo dirigido es una modalidad de graduación que consiste en realizar prácticas profesionales y actividades de investigación. El objetivo es aplicar los conocimientos adquiridos en la universidad a la realidad</p>
+            </div>
+        </div>
+        <a href="contacto.html" class="contact-button">Solicitar más Información</a>
+    </div>
+
+    <script>
+        function toggleDescription(modalidadId) {
+            var description = document.getElementById(modalidadId);
+            if (description.classList.contains('show')) {
+                description.classList.remove('show');
+            } else {
+                description.classList.add('show');
+            }
+        }
+    </script>
 <footer class="bg-dark text-white py-5">
     <div class="container">
         <div class="row">

@@ -5,7 +5,113 @@
         .nav-item.dropdown:hover .dropdown-menu {
             display: block;
         }
+        .logo-circular {
+        border-radius: 50%; 
+        object-fit: cover;  
+        width: 50px;        
+        height: 50px;       
+        border: 2px solid white; 
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+        
+        #perfil-profesional {
+            background-color: #eaf2f8; /* Fondo suave azul claro */
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #perfil-profesional h2 {
+            color: #003366; /* Azul oscuro */
+            font-weight: 700;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #perfil-profesional p {
+            font-size: 18px;
+            color: #333;
+            text-align: justify;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        #perfil-profesional h3 {
+            color: #0056b3; /* Azul oscuro */
+            font-size: 22px;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+
+        #perfil-profesional .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+        }
+
+        #perfil-profesional .skills-list li {
+            background-color: #0056b3; /* Azul oscuro */
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        #perfil-profesional .skills-list li:hover {
+            background-color: #003366; /* Azul más oscuro */
+        }
+
+        #perfil-profesional .cta-button {
+            display: block;
+            width: 220px;
+            margin: 30px auto;
+            padding: 12px;
+            background-color: #0056b3; /* Azul oscuro */
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        #perfil-profesional .cta-button:hover {
+            background-color: #003366; /* Azul aún más oscuro */
+        }
+
+        #perfil-profesional .perfil-imagen {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        #perfil-profesional .perfil-imagen img {
+            border-radius: 15px;
+            width: 100%;
+            max-width: 450px;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cambiar color de las letras en "Áreas de Desempeño" */
+        #perfil-profesional ul {
+            color: #333; /* Color oscuro para las áreas de desempeño */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
+
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,15 +127,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
-<style>
-    .logo-circular {
-        border-radius: 50%; 
-        object-fit: cover;  
-        width: 50px;        
-        height: 50px;       
-        border: 2px solid white; 
-    }
-</style>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
@@ -90,15 +188,49 @@
             </div>
         </div>
     </nav>
+    <div id="perfil-profesional">
+        <h2>PERFIL PROFESIONAL</h2>
 
+        <p>
+            El egresado de esta carrera posee una formación sólida y versátil que le permite enfrentar los retos del entorno laboral. Gracias a sus competencias en el ámbito técnico y humano, se convierte en un profesional con capacidad para asumir roles de liderazgo, investigación, y gestión, contribuyendo al progreso de su campo y la mejora de su entorno.
+        </p>
 
+        <h3>Habilidades y Competencias</h3>
+        <ul class="skills-list">
+            <li>Resolución de Problemas</li>
+            <li>Trabajo en Equipo</li>
+            <li>Liderazgo</li>
+            <li>Comunicación Eficaz</li>
+            <li>Innovación</li>
+            <li>Gestión de Proyectos</li>
+            <li>Desarrollo Tecnológico</li>
+            <li>Investigación</li>
+        </ul>
 
+        <h3>Áreas de Desempeño</h3>
+        <p>
+            El profesional podrá desempeñarse en diversas áreas, tales como:
+        </p>
+        <ul>
+            <li>Consultoría Empresarial</li>
+            <li>Investigación y Desarrollo</li>
+            <li>Gestión de Proyectos</li>
+            <li>Desarrollo Tecnológico</li>
+            <li>Docencia Universitaria</li>
+        </ul>
 
+        <div class="perfil-imagen">
+            <img src="img/home/perfil_prof.png" alt="perfil profesional">
+        </div>
 
+        <a href="contacto.html" class="cta-button" id="ctaButton">Solicita más Información</a>
+    </div>
 
-
-
-
+    <script>
+        document.getElementById('ctaButton').addEventListener('click', function() {
+            alert("Gracias por tu interés. Serás redirigido a más información.");
+        });
+    </script>
     
 <footer class="bg-dark text-white py-5">
     <div class="container">
