@@ -75,99 +75,223 @@
 </nav>
 
 <style>
+    /* Estilos generales */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('img/chatbot/foto1.jpg'); /* Ruta de la imagen */
+        background-size: cover; /* Cubre toda la pantalla */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que se repita */
+        color: #000; /* Texto negro */
+        min-height: 100vh; /* Asegura que el fondo cubra toda la altura */
+    }
+
+    /* Contenedor para centrar el encabezado */
+    .centered-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Alinea el texto al centro */
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
+    }
+
+    header {
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #000; /* Texto negro */
+    }
+
+    header p {
+        margin: 10px 0 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #333; /* Texto gris oscuro */
+    }
+
+    /* Barra de navegación */
+    nav {
+        background-color: rgba(44, 62, 80, 0.9); /* Fondo semi-transparente */
+        padding: 15px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav a {
+        color: #fff;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    nav a:hover {
+        color: #1abc9c;
+    }
+
     /* Estilos para el chatbot */
     .chatbot-container {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        width: 300px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        background-color: rgba(44, 62, 80, 0.9); /* Fondo semi-transparente */
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         display: none; /* Oculto por defecto */
+        flex-direction: column;
+        height: 450px;
+        overflow: hidden;
+        backdrop-filter: blur(5px); /* Efecto de desenfoque */
     }
 
     .chatbot-header {
-        background-color: #1abc9c;
+        background-color: rgba(26, 188, 156, 0.9); /* Fondo semi-transparente */
         color: #fff;
-        padding: 10px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        text-align: center;
-        font-weight: bold;
+        padding: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .chatbot-header h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .chatbot-header button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .chatbot-header button:hover {
+        transform: scale(1.1);
     }
 
     .chatbot-body {
-        padding: 10px;
-        height: 200px;
+        padding: 15px;
+        flex-grow: 1;
         overflow-y: auto;
-        border-bottom: 1px solid #ccc;
+        background-color: rgba(52, 73, 94, 0.9); /* Fondo semi-transparente */
     }
 
     .chatbot-footer {
-        padding: 10px;
+        padding: 15px;
+        background-color: rgba(44, 62, 80, 0.9); /* Fondo semi-transparente */
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
     }
 
     .chatbot-footer input {
         width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        font-size: 14px;
+        background-color: rgba(52, 73, 94, 0.9); /* Fondo semi-transparente */
+        color: #fff;
+        outline: none;
+    }
+
+    .chatbot-footer input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
     }
 
     .chatbot-toggle {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        background-color: #1abc9c;
+        background-color: rgba(26, 188, 156, 0.9); /* Fondo semi-transparente */
         color: #fff;
         border: none;
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
+        width: 80px; /* Más grande */
+        height: 80px; /* Más grande */
+        font-size: 32px; /* Más grande */
         cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .chatbot-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
     }
 
     .message {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        display: flex;
     }
 
     .message.user {
-        text-align: right;
+        justify-content: flex-end;
     }
 
     .message.bot {
-        text-align: left;
+        justify-content: flex-start;
     }
 
     .message p {
         display: inline-block;
-        padding: 8px;
+        padding: 10px 15px;
         border-radius: 10px;
         max-width: 80%;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     .message.user p {
-        background-color: #1abc9c;
+        background-color: rgba(26, 188, 156, 0.9); /* Fondo semi-transparente */
         color: #fff;
+        border-bottom-right-radius: 5px;
     }
 
     .message.bot p {
-        background-color: #f1f1f1;
-        color: #333;
+        background-color: rgba(52, 73, 94, 0.9); /* Fondo semi-transparente */
+        color: #fff;
+        border-bottom-left-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 </style>
 </head>
 <body>
 
 <!-- Contenido de tu página -->
-<header>
-    <h1>Contactos</h1>
-    <p>Estamos aquí para ayudarte. ¡Contáctanos cuando lo necesites!</p>
-</header>
+<div class="centered-content">
+    <header>
+        <h1>Contactos</h1>
+        <p>Estamos aquí para ayudarte. ¡Contáctanos cuando lo necesites!</p>
+    </header>
+</div>
+
+<!-- Barra de navegación -->
+<nav>
+    <a href="#informacion">Información</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+</nav>
 
 <!-- Botón para abrir el chatbot -->
 <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
@@ -175,7 +299,8 @@
 <!-- Contenedor del chatbot -->
 <div class="chatbot-container" id="chatbot">
     <div class="chatbot-header">
-        Asistente Virtual
+        <h3>Asistente Virtual</h3>
+        <button onclick="toggleChatbot()">×</button>
     </div>
     <div class="chatbot-body" id="chatbot-body">
         <div class="message bot">
@@ -191,7 +316,15 @@
     // Función para mostrar/ocultar el chatbot
     function toggleChatbot() {
         const chatbot = document.getElementById('chatbot');
-        chatbot.style.display = chatbot.style.display === 'none' ? 'block' : 'none';
+        const chatbotToggle = document.querySelector('.chatbot-toggle');
+
+        if (chatbot.style.display === 'none' || chatbot.style.display === '') {
+            chatbot.style.display = 'flex'; // Mostrar el chatbot
+            chatbotToggle.style.display = 'none'; // Ocultar el botón de toggle
+        } else {
+            chatbot.style.display = 'none'; // Ocultar el chatbot
+            chatbotToggle.style.display = 'flex'; // Mostrar el botón de toggle
+        }
     }
 
     // Función para manejar la entrada del usuario
